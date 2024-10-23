@@ -17,7 +17,7 @@ function MapView({ pins, addPin, selectedPin }) {
 
     return (
         <div className="map-container">
-            {position && <PinForm position={position} addPin={addPin} />}
+            {position && <PinForm position={position} setPosition={setPosition} addPin={addPin} />}
 
             <MapContainer
 

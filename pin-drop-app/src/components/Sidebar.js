@@ -1,11 +1,13 @@
 import React from "react";
 
 function Sidebar({ pins, removePin ,onPinClick}) {
+  let updatePins =[...pins].reverse();
+  
   return (
     <div className="sidebar">
       <h3>Saved Pins</h3>
       <ul>
-        {pins.map((pin, index) => (
+        {updatePins.map((pin, index) => (
           <li key={index}>
             <strong>Remark:</strong> {pin.remark} <br />
             <strong>Address:</strong> {`${pin.address?.amenity || pin.address?.village || pin.address?.county}, ${pin.address?.country} ,${pin.address?.postcode}`} <br />

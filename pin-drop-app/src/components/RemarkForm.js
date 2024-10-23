@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../App.css"
 
-function PinForm({ position, addPin }) {
+function PinForm({ position,setPosition, addPin }) {
   const [remark, setRemark] = useState("");
   const [address, setAddress] = useState("");
   const [loading,setLoading] =useState(true);
@@ -29,6 +29,8 @@ function PinForm({ position, addPin }) {
     e.preventDefault();
     addPin({ lat: position.lat, lng: position.lng, remark, address });
     setRemark(""); 
+    setPosition(null);
+    
   };
 
 
@@ -38,6 +40,7 @@ function PinForm({ position, addPin }) {
         <label>
           Remark:
           <input
+          className="input"
             type="text"
             value={remark}
             onChange={(e) => setRemark(e.target.value)}
