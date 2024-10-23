@@ -1,26 +1,56 @@
 .app-container {
   display: flex;
-  /* border: 1px solid red; */
+  /* gap: 20px; */
+  height: 100vh;
+  width: 100vw;
+  justify-content: space-between;
+
 }
 
 .sidebar {
-  width: 30vw;
-  padding: 1rem;
+  width: 25vw;
   background-color: #f8f9fa;
   overflow-y: auto;
   border-left: 1px solid #ddd;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .sidebar h3 {
+  font-size: 2rem;
+  text-align: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+}
+
+.sidebar ul li {
+  list-style: none;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  padding: 10px;
+  border-radius: 1rem;
   margin-bottom: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.map-container {
+  position: relative;
+}
+
+.sidebar button {
+  margin-right: 10px;
+  border-radius: 4px;
 }
 
 .pin-form {
- 
-  padding: 1rem;
+  position: absolute;
+  top: 10;
+  right: 0;
+  z-index: 1000;
+  padding: 2rem;
   border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  background-color: rgb(245, 243, 240);
 }
 
-.map-container{
-
+.input {
+  padding: 5px 10px;
+  border-radius: 5px;
 }
